@@ -21,7 +21,11 @@ class Fraction(object):
 
     def gcd(a, b):
         #TODO
-        pass
+        if a == 0 and b == 0:
+            return 0
+        while b:
+            a, b = b, a % b
+        return a
 
     def get_numerator(self):
         #TODO
