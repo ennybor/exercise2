@@ -29,7 +29,7 @@ class Fraction(object):
 
     def get_numerator(self):
         #TODO
-        pass
+        return str(self.numerator)
 
     def get_denominator(self):
         #TODO
