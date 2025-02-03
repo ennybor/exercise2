@@ -7,7 +7,7 @@ class Fraction(object):
                 self.denominator = 1
             elif '/' in fraction_string:
                 num, denom = fraction_string.split('/')
-                if num.isdigit() and denom.isdigit:
+                if self._is_integer(num) and self._is_integer(denom):
                     self.numerator = int(num)
                     self.denominator = int(denom)
                 else:
@@ -58,3 +58,6 @@ class Fraction(object):
             return f"{self.numerator}/{self.denominator}"
         else:
             return f"{self.numerator}/{self.denominator}"
+        
+    def _is_integer(self,string):
+        return string.isdigit() or (string.startswith("-") and string[1:].isdigit())
