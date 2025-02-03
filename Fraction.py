@@ -1,7 +1,5 @@
 class Fraction(object):
-
     def __init__(self, numerator=0, denominator=1):
-        #TODO
         if isinstance(numerator, str):
             fraction_string = numerator.strip()
             if '/' in fraction_string:
@@ -19,8 +17,9 @@ class Fraction(object):
         else:
             raise ValueError("Invalid input type")
 
+    @staticmethod
     def gcd(a, b):
-        #TODO
+        """Return the greatest common divisor of a and b using the Euclidean algorithm."""
         if a == 0 and b == 0:
             return 0
         while b:
@@ -28,15 +27,15 @@ class Fraction(object):
         return a
 
     def get_numerator(self):
-        #TODO
+        """Return the numerator as a string."""
         return str(self.numerator)
 
     def get_denominator(self):
-        #TODO
+        """Return the denominator as a string."""
         return str(self.denominator)
 
     def get_fraction(self):
-        #TODO
+        """Return the fraction as a string in the form 'numerator/denominator' or just 'numerator'."""
         if self.denominator == 1:
             return str(self.numerator)
         else:
