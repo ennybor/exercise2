@@ -33,7 +33,7 @@ class Fraction(object):
     @staticmethod
     def gcd(a, b):
         """Return the greatest common divisor of a and b using the Euclidean algorithm."""
-        if a == 0 and b == 0:
+        if a == 0 or b == 0:
             return 0
         while b:
             a, b = b, a % b
