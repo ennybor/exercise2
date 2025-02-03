@@ -58,6 +58,7 @@ class Fraction(object):
             return f"{self.numerator}/{self.denominator}"
         else:
             return f"{self.numerator}/{self.denominator}"
-        
+
     def _is_integer(self,string):
         return string.isdigit() or (string.startswith("-") and string[1:].isdigit())
+    

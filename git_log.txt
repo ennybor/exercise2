@@ -1,0 +1,17 @@
+https://github.com/ennybor/exercise2.git
+
+$ git log --graph --pretty=format:"%h%x09%an%x09%ad%x09%s"
+*   74e6ab0     ejjaso18        Mon Feb 3 18:47:56 2025 +0800   Merge pull request #1 from ennybor/get_fraction
+|\
+| * 1f8408f     ejjaso18        Mon Feb 3 18:32:20 2025 +0800   fixed negative string input fractions
+| * 72f6654     ejjaso18        Mon Feb 3 18:13:33 2025 +0800   fixed negative input fractions
+| * efad8cb     ejjaso18        Mon Feb 3 18:04:02 2025 +0800   fixed gcd zero inputs
+| * 150a3b6     ejjaso18        Mon Feb 3 17:58:54 2025 +0800   added checkers for invalid inputs
+| * 9962b56     ejjaso18        Mon Feb 3 17:45:06 2025 +0800   added checker for input with alphabet with '/', i.e. 'abc/def'
+| * 2790a71     ennybor11       Mon Feb 3 16:03:12 2025 +0800   there are 4 failed tests, and 1 error daw.
+| * 0331fb8     ennybor11       Mon Feb 3 13:37:02 2025 +0800   Returned the fraction as a str in the form 'numerator/denominator' or 'numerator'
+| * f030e99     ennybor11       Mon Feb 3 13:32:18 2025 +0800   Added method to return denominator string. In hindsight maybe this is what causes some errors. Will update later.
+| * cd59ff2     ennybor11       Mon Feb 3 13:29:31 2025 +0800   Added method to return numerator string
+| * cb648ea     ennybor11       Mon Feb 3 13:25:05 2025 +0800   Used Euclidian Algorithm
+| * a0decd5     ennybor11       Mon Feb 3 13:14:46 2025 +0800   Added string parsing to initialize the fraction. Improved fraction constructor to handle string input. Should also be able to handle invalid inputs and zero denominator. Should also be able to handle string and integer outputs.
+| * 516f62e     ennybor11       Thu Jan 30 13:34:19 2025 +0800  Added initializations
