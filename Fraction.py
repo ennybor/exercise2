@@ -49,7 +49,12 @@ class Fraction(object):
 
     def get_fraction(self):
         """Return the fraction as a string in the form 'numerator/denominator' or just 'numerator'."""
+        gcd = self.gcd(self.numerator, self.denominator)
         if self.denominator == 1:
             return str(self.numerator)
+        elif gcd > 1 or gcd < -1:
+            self.numerator = int(self.numerator / gcd)
+            self.denominator = int(self.denominator / gcd)
+            return f"{self.numerator}/{self.denominator}"
         else:
             return f"{self.numerator}/{self.denominator}"
