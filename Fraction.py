@@ -2,7 +2,10 @@ class Fraction(object):
     def __init__(self, numerator=0, denominator=1):
         if isinstance(numerator, str):
             fraction_string = numerator.strip()
-            if '/' in fraction_string:
+            if fraction_string.count("/") > 1:
+                self.numerator = 0
+                self.denominator = 1
+            elif '/' in fraction_string:
                 num, denom = fraction_string.split('/')
                 if num.isdigit() and denom.isdigit:
                     self.numerator = int(num)
@@ -10,14 +13,20 @@ class Fraction(object):
                 else:
                     self.numerator = 0
                     self.denominator = 1
-            else:
+            elif fraction_string.isdigit():
                 self.numerator = int(fraction_string)
+                self.denominator = 1
+            else:
+                self.numerator = 0
                 self.denominator = 1
         elif isinstance(numerator, int):
             if denominator == 0:
                 raise ZeroDivisionError("Denominator cannot be zero")
             self.numerator = numerator
             self.denominator = denominator
+        elif isinstance(numerator, float):
+            self.numerator = 0
+            self.denominator = 1
         else:
             raise ValueError("Invalid input type")
 
