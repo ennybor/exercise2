@@ -4,8 +4,12 @@ class Fraction(object):
             fraction_string = numerator.strip()
             if '/' in fraction_string:
                 num, denom = fraction_string.split('/')
-                self.numerator = int(num)
-                self.denominator = int(denom)
+                if num.isdigit() and denom.isdigit:
+                    self.numerator = int(num)
+                    self.denominator = int(denom)
+                else:
+                    self.numerator = 0
+                    self.denominator = 1
             else:
                 self.numerator = int(fraction_string)
                 self.denominator = 1
